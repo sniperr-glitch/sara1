@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forever Us ❤️ | Andrew & Sara</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <title>Saatvik ❤️ Sara | Permanently Down Bad</title>
+    <!-- Luxury Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,213 +13,245 @@
     <div id="cursorGlow"></div>
     <div id="toastContainer"></div>
 
+    <!-- ================= THE "DOWN BAD" OS LOADER ================= -->
     <div id="loader">
         <div class="loader-terminal">
             <div class="terminal-header">
                 <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-                <p>system_boot_love.exe</p>
+                <p>saatviks_brain_24_7.exe</p>
             </div>
             <div class="terminal-body" id="loaderLog"></div>
             <div class="loader-progress-wrap">
                 <div class="loader-progress-bar" id="loaderBar"></div>
             </div>
-            <span class="loader-percent" id="loaderPercent">0%</span>
+            <div class="loader-status-row">
+                <span class="loader-status">Bypassing 'Play it Cool' firewall...</span>
+                <span class="loader-percent" id="loaderPercent">0%</span>
+            </div>
         </div>
     </div>
 
+    <!-- ================= LIVING AURORA BACKGROUND ================= -->
     <div class="canvas-bg-wrapper">
         <div class="aurora-beam aurora-1"></div>
         <div class="aurora-beam aurora-2"></div>
         <canvas id="livingBgCanvas"></canvas>
     </div>
 
+    <!-- ================= LIVE FAKE iMESSAGE DROPPER ================= -->
+    <div id="imessageToast" class="imessage-popup hidden">
+        <div class="imessage-header">
+            <span class="sender">Saatvik 🤍</span>
+            <span class="time">now</span>
+        </div>
+        <p id="imessageText">stop being cute it's distracting</p>
+    </div>
+
+    <!-- ================= FLOATING MUSIC PLAYER ================= -->
     <div class="luxury-player" id="musicPlayer">
         <button id="musicToggleBtn" aria-label="Play Music">🎵</button>
         <div class="player-details">
-            <span class="track-name">Our Forever Song</span>
+            <span class="track-name">Our Vibe 🎧</span>
             <div class="visualizer" id="audioVisualizer">
                 <span></span><span></span><span></span><span></span><span></span>
             </div>
         </div>
-        <input type="range" id="volumeSlider" min="0" max="1" step="0.05" value="0.3">
+        <input type="range" id="volumeSlider" min="0" max="1" step="0.05" value="0.35">
     </div>
 
-    <div id="floatingCompliment" class="glass-pill"></div>
-
+    <!-- ================= NAVIGATION ================= -->
     <nav class="glass-nav">
-        <div class="logo">Forever Us ❤️</div>
+        <div class="logo">Saatvik & Sara ❤️</div>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#scanner">Scanner</a></li>
-            <li><a href="#calculator">Love Calc</a></li>
-            <li><a href="#distance">Distance</a></li>
-            <li><a href="#gallery">Memories</a></li>
-            <li><a href="#letter">Letter</a></li>
-            <li><a href="#game">Mini-Game</a></li>
+            <li><a href="#home">Vibe</a></li>
+            <li><a href="#about">The Obsession</a></li>
+            <li><a href="#scanner">Trial By Jury</a></li>
+            <li><a href="#calculator">The Math</a></li>
+            <li><a href="#distance">GPS</a></li>
+            <li><a href="#letter">Confession</a></li>
         </ul>
     </nav>
 
+    <!-- ================= HERO SECTION ================= -->
     <section id="home" class="hero">
         <div class="hero-card glass-panel magnetic-target">
-            <span class="pill-badge">✨ System Status: Madly in Love</span>
-            <h1 class="glimmer-text">For the most beautiful girl<br>in my universe ❤️</h1>
-            <p>Distance may separate our coordinates, but my gravity will always pull me to yours.</p>
+            <span class="pill-badge">🚨 Official Status: Down Catastrophically</span>
+            <h1 class="glimmer-text">For the girl who permanently<br>rewired my brain ❤️</h1>
+            <p>6,000+ kilometers away, but somehow still living rent-free in my head 24 hours a day.</p>
             <div class="hero-actions">
-                <button class="btn-luxury magnetic-btn" id="exploreBtn"><span>Open My Heart ❤️</span></button>
+                <button class="btn-luxury magnetic-btn" id="exploreBtn"><span>Enter The Simp Zone 🧎‍♂️</span></button>
             </div>
         </div>
         <div class="scroll-indicator">
-            <span>Scroll to Explore</span>
+            <span>Scroll at your own risk</span>
             <div class="mouse-icon"><div class="wheel"></div></div>
         </div>
     </section>
 
+    <!-- ================= THE TEASE SECTION ================= -->
     <section id="about" class="section-padded reveal-on-scroll">
         <div class="section-header">
-            <h2>The Subject of My Affection</h2>
-            <p class="subtitle">An objective, highly scientific analysis of Sara</p>
+            <h2>The Subject of My Lack of Focus</h2>
+            <p class="subtitle">An objective review of why I can't get anything done</p>
         </div>
         <div class="about-grid">
             <div class="glass-panel main-about">
-                <p>You are the brightest constellation in my sky. Your kindness elevates every ordinary moment into something sacred. Even separated by thousands of miles across continents, a single text from you feels more like home than any physical building ever could.</p>
-                <div class="fake-notification">
-                    <div class="notif-icon">⚠️</div>
-                    <div class="notif-content">
-                        <strong>Warning: Extreme Adorableness</strong>
-                        <span>Side effects of looking at Sara include uncontrollable smiling, rapid heartbeat, and severe longing for hugs.</span>
+                <h3>The Sara Effect™</h3>
+                <p>Scientists claim the human brain can hold 2.5 petabytes of memory. Mine currently consists of: 4% useless trivia, 1% remembering to drink water, and **95% replaying that specific face you make when you're trying not to laugh at my jokes.**</p>
+                <p>You have this dangerous combination of being genuinely the sweetest soul on earth, while simultaneously possessing the ability to roast my entire existence in a 4-word text message. *I love it.*</p>
+                <div class="flirt-warning-box">
+                    <span class="icon">⚠️</span>
+                    <div>
+                        <strong>Hazard Advisory</strong>
+                        <span>Prolonged exposure to Sara's voice notes has been proven to cause random smiling in public grocery stores.</span>
                     </div>
                 </div>
             </div>
+
             <div class="metrics-column">
                 <div class="glass-panel metric-card">
-                    <span class="metric-title">Relationship Review</span>
+                    <span class="metric-title">Customer Review</span>
                     <span class="stars">⭐⭐⭐⭐⭐</span>
-                    <p>"Would date across infinite timelines." — Andrew</p>
+                    <p class="quote">"10 out of 10. Would let her ruin my sleep schedule across infinite alternate universes."</p>
+                    <span class="author">— Saatvik (Verified Simp)</span>
                 </div>
-                <div class="glass-panel metric-card">
-                    <span class="metric-title">System Bug Report #404</span>
-                    <p><strong>Error:</strong> Heart not found in Andrew's chest.<br><strong>Resolution:</strong> Permanently stolen by Sara.</p>
+
+                <div class="glass-panel metric-card terms-card">
+                    <span class="metric-title">Terms & Conditions</span>
+                    <ul class="mini-terms">
+                        <li>✓ Saatvik owes Sara infinite forehead kisses.</li>
+                        <li>✓ All Saatvik's oversized hoodies legally belong to Sara.</li>
+                        <li>✓ "I'm not hungry" actually means "Buy me fries."</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ================= GIRLFRIEND COURT SCANNER ================= -->
     <section id="scanner" class="section-padded reveal-on-scroll">
         <div class="section-header">
-            <h2>Biometric Girlfriend Scanner</h2>
-            <p class="subtitle">Quantum diagnostic tool powered by Andrew-AI</p>
+            <h2>The Cutie High Court</h2>
+            <p class="subtitle">Put Sara on trial for stealing public property (my heart)</p>
         </div>
         <div class="scanner-container glass-panel">
             <div class="scanner-viewport">
                 <div class="scan-line" id="scanLine"></div>
-                <div class="scanner-idle" id="scannerIdle">Press the button below to initialize diagnostic scan...</div>
+                <div class="scanner-idle" id="scannerIdle">
+                    <span class="gavel">👨‍⚖️</span>
+                    <p>Press the button below to subpoena the defendant...</p>
+                </div>
                 <div class="scanner-readout hidden" id="scannerReadout">
-                    <div class="readout-row"><span>Target Subject:</span> <strong>Sara (Flawless Edition)</strong></div>
-                    <div class="readout-row"><span>Cuteness Level:</span> <strong class="red-text">999,999.99% (CRITICAL)</strong></div>
-                    <div class="readout-row"><span>Angel Coefficient:</span> <strong>∞ Infinity</strong></div>
-                    <div class="readout-row"><span>Heart Stealing Capability:</span> <strong>Masterclass Level</strong></div>
-                    <div class="readout-row"><span>Andrew's Obsession Metric:</span> <strong>Off the Charts</strong></div>
-                    <div class="readout-verdict">VERDICT: ILLEGALLY PRETTY. RETAIN FOREVER.</div>
+                    <div class="readout-row"><span>Defendant:</span> <strong>Sara (The Gorgeous One)</strong></div>
+                    <div class="readout-row"><span>Primary Charge:</span> <strong class="red-text">Being Illegally Fine in a Public Airspace</strong></div>
+                    <div class="readout-row"><span>Evidence Submitted:</span> <strong>Exhibit A: That smile. Exhibit B: The eye contact.</strong></div>
+                    <div class="readout-row"><span>Saatvik's Dignity Level:</span> <strong>0.00% (Fully surrendered)</strong></div>
+                    <div class="readout-verdict">GUILTY AS CHARGED. SENTENCED TO LIFE WITH SAATVIK.</div>
                 </div>
             </div>
-            <button class="btn-luxury magnetic-btn" id="runScanBtn"><span>⚡ Run Diagnostic Scan</span></button>
+            <button class="btn-luxury magnetic-btn" id="runScanBtn"><span>⚖️ Put Her On Trial</span></button>
         </div>
     </section>
 
+    <!-- ================= RIGGED LOVE CALCULATOR ================= -->
     <section id="calculator" class="section-padded reveal-on-scroll">
         <div class="section-header">
-            <h2>Quantum Love Calculator</h2>
-            <p class="subtitle">Empirical mathematical proof of our compatibility</p>
+            <h2>The "Are We Mentally Ill Together?" Calc</h2>
+            <p class="subtitle">High-level empirical proof that the universe rigged this</p>
         </div>
         <div class="calc-box glass-panel">
             <div class="calc-inputs">
-                <div class="person">Andrew 🇮🇳</div>
-                <div class="plus">+</div>
+                <div class="person">Saatvik 🇮🇳</div>
+                <div class="plus">💖</div>
                 <div class="person">Sara 🇵🇱</div>
             </div>
             <div class="calc-display">
                 <span id="calcNumber">0%</span>
                 <div class="calc-bar-bg"><div class="calc-bar-fill" id="calcFill"></div></div>
             </div>
-            <p class="calc-subtext" id="calcText">Click compute to run the algorithm</p>
-            <button class="btn-luxury magnetic-btn" id="calculateLoveBtn"><span>💖 Compute Compatibility</span></button>
+            <p class="calc-subtext" id="calcText">Click to run the vibe algorithm</p>
+            <button class="btn-luxury magnetic-btn" id="calculateLoveBtn"><span>🎰 Test Our Fate</span></button>
         </div>
     </section>
 
+    <!-- ================= LONG DISTANCE ================= -->
     <section id="distance" class="section-padded reveal-on-scroll">
         <div class="section-header">
-            <h2>Defying Geographical Coordinates</h2>
-            <p class="subtitle">6,000+ Kilometers mean nothing to a connection like ours</p>
+            <h2>Defying International Airspace</h2>
+            <p class="subtitle">Proof that distance is just a temporary math problem</p>
         </div>
         <div class="map-luxury glass-panel">
-            <div class="map-node india-node">
+            <div class="map-node">
                 <span class="flag">🇮🇳</span>
-                <span class="country">India</span>
-                <span class="coords">20.5937° N</span>
+                <span class="country">Saatvik</span>
+                <span class="coords">Missing you</span>
             </div>
             <div class="flight-corridor">
                 <svg class="flight-path-svg" viewBox="0 0 500 100">
-                    <path id="curvePath" d="M 10,80 Q 250,-30 490,80" fill="transparent" stroke="rgba(230,168,184,0.4)" stroke-width="3" stroke-dasharray="8 6"/>
-                    <text font-size="22"><textPath href="#curvePath" startOffset="0%" id="planeIcon">✈️</textPath></text>
+                    <path id="curvePath" d="M 10,80 Q 250,-30 490,80" fill="transparent" stroke="rgba(212, 122, 147, 0.4)" stroke-width="3" stroke-dasharray="8 6"/>
+                    <text font-size="24"><textPath href="#curvePath" startOffset="0%" id="planeIcon">✈️</textPath></text>
                 </svg>
-                <div class="live-distance-counter">Distance remaining until hugs: <strong id="kmCounter">6,124</strong> km</div>
+                <div class="live-distance-counter">
+                    Status: <strong id="flightStatusText">Manifesting teleportation...</strong>
+                </div>
             </div>
-            <div class="map-node poland-node">
+            <div class="map-node">
                 <span class="flag">🇵🇱</span>
-                <span class="country">Poland</span>
-                <span class="coords">51.9194° N</span>
+                <span class="country">Sara</span>
+                <span class="coords">Being a 10/10</span>
             </div>
         </div>
     </section>
 
+    <!-- ================= POLAROID GALLERY ================= -->
     <section id="gallery" class="section-padded reveal-on-scroll">
         <div class="section-header">
-            <h2>Captured Timelines</h2>
-            <p class="subtitle">Moments frozen in time, waiting for our next chapter</p>
+            <h2>The Camera Roll Hall of Fame</h2>
+            <p class="subtitle">The exact photos keeping me sane through the distance</p>
         </div>
         <div class="polaroid-grid">
-            <div class="polaroid-card tilt-card">
+            <div class="polaroid-card">
                 <div class="tape tape-top-left"></div>
-                <div class="polaroid-frame"><img src="images/photo1.jpg" alt="Memory 1"></div>
-                <span class="handwritten">Our very first call ❤️</span>
+                <div class="polaroid-frame"><img src="images/photo1.jpg" alt="Sara 1"></div>
+                <span class="handwritten">my lockscreen literally</span>
             </div>
-            <div class="polaroid-card tilt-card">
+            <div class="polaroid-card">
                 <div class="tape tape-top-right"></div>
-                <div class="polaroid-frame"><img src="images/photo2.jpg" alt="Memory 2"></div>
-                <span class="handwritten">That smile I adore</span>
+                <div class="polaroid-frame"><img src="images/photo2.jpg" alt="Sara 2"></div>
+                <span class="handwritten">the outfit that killed me</span>
             </div>
-            <div class="polaroid-card tilt-card">
+            <div class="polaroid-card">
                 <div class="tape tape-top-center"></div>
-                <div class="polaroid-frame"><img src="images/photo3.jpg" alt="Memory 3"></div>
-                <span class="handwritten">Late night screenshots</span>
+                <div class="polaroid-frame"><img src="images/photo3.jpg" alt="Sara 3"></div>
+                <span class="handwritten">100% trouble right here</span>
             </div>
-            <div class="polaroid-card tilt-card">
+            <div class="polaroid-card">
                 <div class="tape tape-top-left"></div>
-                <div class="polaroid-frame"><img src="images/photo4.jpg" alt="Memory 4"></div>
-                <span class="handwritten">Counting down the days</span>
+                <div class="polaroid-frame"><img src="images/photo4.jpg" alt="Sara 4"></div>
+                <span class="handwritten">stolen hoodie potential</span>
             </div>
-            <div class="polaroid-card tilt-card">
+            <div class="polaroid-card">
                 <div class="tape tape-top-right"></div>
-                <div class="polaroid-frame"><img src="images/photo5.jpg" alt="Memory 5"></div>
-                <span class="handwritten">My favorite notification</span>
+                <div class="polaroid-frame"><img src="images/photo5.jpg" alt="Sara 5"></div>
+                <span class="handwritten">how is she real tho</span>
             </div>
-            <div class="polaroid-card tilt-card">
+            <div class="polaroid-card">
                 <div class="tape tape-top-center"></div>
-                <div class="polaroid-frame"><img src="images/photo6.jpg" alt="Memory 6"></div>
-                <span class="handwritten">Forever & Always ✨</span>
+                <div class="polaroid-frame"><img src="images/photo6.jpg" alt="Sara 6"></div>
+                <span class="handwritten">Us very very soon 🤍</span>
             </div>
         </div>
     </section>
 
+    <!-- ================= THE ENVELOPE (THE REAL RIZZ) ================= -->
     <section id="letter" class="section-padded reveal-on-scroll">
         <div class="section-header">
-            <h2>A Confidential Dispatch</h2>
-            <p class="subtitle">Signed, sealed, and delivered directly to your heart</p>
+            <h2>Okay, Jokes Aside...</h2>
+            <p class="subtitle">Tap the wax seal. Read this when you're alone.</p>
         </div>
         <div class="envelope-wrapper" id="envelopeContainer">
             <div class="envelope">
-                <div class="wax-seal">❤</div>
+                <div class="wax-seal">💌</div>
                 <div class="envelope-flap"></div>
                 <div class="letter-paper">
                     <div class="letter-content">
@@ -226,75 +259,38 @@
                     </div>
                 </div>
             </div>
-            <p class="click-instruct">Click the wax seal to break open my letter</p>
+            <p class="click-instruct">Click the seal to break the lock</p>
         </div>
     </section>
 
-    <section id="game" class="section-padded reveal-on-scroll">
-        <div class="section-header">
-            <h2>Sara's Heart Collector</h2>
-            <p class="subtitle">Catch 15 falling rose-gold hearts to unlock a secret message</p>
-        </div>
-        <div class="game-container glass-panel">
-            <div class="game-hud">
-                <span>Score: <strong id="gameScore">0</strong> / 15</span>
-                <span id="gameTimer">Time: 25s</span>
-            </div>
-            <canvas id="miniGameCanvas" width="800" height="400"></canvas>
-            <div class="game-overlay" id="gameStartOverlay">
-                <button class="btn-luxury" id="startGameBtn"><span>🎮 Start Catching</span></button>
-            </div>
-            <div class="game-overlay hidden" id="gameWinOverlay">
-                <h3>🏆 Secret Unlocked!</h3>
-                <p>"No matter where life takes us, you are my definitive home. I love you endlessly Sara."</p>
-                <button class="btn-luxury" id="resetGameBtn"><span>Play Again</span></button>
-            </div>
-        </div>
-    </section>
-
+    <!-- ================= FAKE RANSOM VIRUS ================= -->
     <div class="virus-modal hidden" id="virusModal">
         <div class="virus-box glass-panel">
-            <div class="virus-header"><span>CRITICAL SYSTEM ALERT</span> <button id="closeVirus">✕</button></div>
+            <div class="virus-header"><span>⚠️ RANSOMWARE DETECTED</span> <button id="closeVirus">✕</button></div>
             <div class="virus-body">
-                <div class="virus-icon">☣️</div>
+                <div class="virus-icon">🔒</div>
                 <div class="virus-text">
-                    <h4>Love.exe has infected your system</h4>
-                    <p><strong>Symptoms Detected:</strong></p>
-                    <ul>
-                        <li>Daydreaming about Andrew during work hours</li>
-                        <li>Random blushing episodes</li>
-                        <li>Acute deficiency of cuddles</li>
-                    </ul>
-                    <p class="cure"><strong>Recommended Cure:</strong> Immediate FaceTime session & booking plane tickets.</p>
+                    <h4>Saatvik.exe has hijacked this device</h4>
+                    <p>Your browser has been locked due to an unpaid debt of **450 hugs** owed to the developer.</p>
+                    <p class="cure">To decrypt your phone, you must immediately text Saatvik: *"I miss you cutie"*</p>
                 </div>
             </div>
-            <button class="btn-luxury full-width" id="acknowledgeVirus"><span>I Accept My Fate ❤️</span></button>
+            <button class="btn-luxury full-width" id="acknowledgeVirus"><span>Fine, I'll text him 🙄❤️</span></button>
         </div>
     </div>
 
+    <!-- ================= FINALE ================= -->
     <section class="grand-finale">
         <canvas id="fireworksCanvas"></canvas>
         <div class="finale-content glass-panel">
             <div class="heart-pulse-huge" id="secretTrigger">❤️</div>
-            <div class="loading-future">
-                <span>Loading Future Milestones...</span>
-                <div class="future-bar"><div class="future-fill"></div></div>
-                <div class="milestones">
-                    <span>Airport Hug: Completed in spirit</span>
-                    <span>Closing the Distance: Pending</span>
-                    <span>Marriage: 100% Guaranteed</span>
-                </div>
-            </div>
-            <h2 class="cinematic-quote">"If I had a single wish across infinite lifetimes...<br>I would spend every sunrise and sunset with you."</h2>
-            <h1 class="forever-title">I Love You Forever, Sara ❤️</h1>
-            <p class="footer-credit">Handcrafted with clean HTML, CSS & JS exclusively for Sara.</p>
+            <h2 class="cinematic-quote">"Out of 8 billion people on this rock...<br>I'm so glad my weird matched your weird."</h2>
+            <h1 class="forever-title">I'm all yours, Sara ❤️</h1>
+            <p class="footer-credit">Handcrafted with zero frameworks, 100% audacity, and too much love.</p>
         </div>
     </section>
 
-    <div id="lightbox" class="hidden"><img id="lightboxImg" src="" alt="Zoomed"></div>
-
     <audio id="bgMusic" loop preload="auto"><source src="music/song.mp3" type="audio/mpeg"></audio>
-
     <script src="script.js"></script>
 </body>
 </html>
