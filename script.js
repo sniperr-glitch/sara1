@@ -1,21 +1,15 @@
-/**
- * FOREVER US V2: QUANTUM LOVE ENGINE
- * Engineered cleanly with Vanilla ES6+
- */
-
 document.addEventListener('DOMContentLoaded', () => {
 
-    /* ================= 1. CINEMATIC OS LOADER ================= */
+    /* ================= 1. THE "SIMP_MODE.EXE" LOADER ================= */
     const bootLogs = [
-        "Initializing core emotional protocols...",
-        "Loading shared memories from secure storage...",
-        "Searching global coordinates for Sara...",
-        "Target identified: Poland (51.9194° N, 19.1451° E)",
-        "Analyzing smile topography... Flawless topography confirmed.",
-        "Calculating infinite love metric...",
-        "ERROR: Adorableness exceeded integer limit.",
-        "Overriding system architecture... Success.",
-        "Welcome back, my favorite person ❤️"
+        "Connecting to Saatvik's central nervous system...",
+        "Scanning internal thoughts... 99% Sara detected.",
+        "Checking Saatvik's dignity levels... [0.00% - DOWN BAD]",
+        "Loading Sara's camera roll... WARNING: High heat hazard.",
+        "Running 'Act Normal Around Her' script... FAILED.",
+        "Overriding cool-guy protocols...",
+        "Engaging Simp_Mode_v2.js... Success.",
+        "Welcome to Saatvik's brain Sara ❤️"
     ];
 
     const logEl = document.getElementById('loaderLog');
@@ -23,11 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const percentEl = document.getElementById('loaderPercent');
     const loaderEl = document.getElementById('loader');
 
-    let logIdx = 0;
-    let progress = 0;
+    let logIdx = 0, progress = 0;
 
     const runLoader = setInterval(() => {
-        progress += Math.floor(Math.random() * 18) + 5;
+        progress += Math.floor(Math.random() * 20) + 6;
         if (progress > 100) progress = 100;
 
         barEl.style.width = `${progress}%`;
@@ -36,7 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (logIdx < bootLogs.length && progress >= (logIdx + 1) * (100 / bootLogs.length)) {
             const p = document.createElement('div');
             p.textContent = `> ${bootLogs[logIdx]}`;
-            if (bootLogs[logIdx].includes("ERROR")) p.className = "error-log";
+            if (bootLogs[logIdx].includes("DOWN BAD") || bootLogs[logIdx].includes("FAILED")) p.className = "simp-red";
+            else if (bootLogs[logIdx].includes("Success")) p.className = "simp-green";
             logEl.appendChild(p);
             logIdx++;
         }
@@ -46,59 +40,46 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 loaderEl.style.opacity = '0';
                 loaderEl.style.visibility = 'hidden';
-                triggerToast("System Booted", "Welcome to your digital home Sara ❤️");
-            }, 800);
+                showToast("System Breached", "Sara officially owns this server ❤️");
+            }, 900);
         }
-    }, 150);
+    }, 140);
 
-    /* ================= 2. LIVING BACKGROUND ENGINE ================= */
+    /* ================= 2. CANVAS BACKGROUND ================= */
     const bgCanvas = document.getElementById('livingBgCanvas');
     const ctx = bgCanvas.getContext('2d');
     let particles = [];
 
-    function resizeBg() {
-        bgCanvas.width = window.innerWidth;
-        bgCanvas.height = window.innerHeight;
-    }
-    window.addEventListener('resize', resizeBg);
-    resizeBg();
+    function resizeBg() { bgCanvas.width = window.innerWidth; bgCanvas.height = window.innerHeight; }
+    window.addEventListener('resize', resizeBg); resizeBg();
 
     class Particle {
-        constructor() {
-            this.reset();
-        }
+        constructor() { this.reset(); }
         reset() {
             this.x = Math.random() * bgCanvas.width;
             this.y = Math.random() * bgCanvas.height;
-            this.size = Math.random() * 2.5 + 1;
-            this.speedX = Math.random() * 0.4 - 0.2;
-            this.speedY = Math.random() * -0.6 - 0.2;
-            this.opacity = Math.random() * 0.5 + 0.2;
-            this.isHeart = Math.random() > 0.85;
+            this.size = Math.random() * 3 + 1;
+            this.speedY = Math.random() * -0.7 - 0.2;
+            this.opacity = Math.random() * 0.45 + 0.15;
+            this.isHeart = Math.random() > 0.82;
         }
         update() {
-            this.x += this.speedX;
             this.y += this.speedY;
-            if (this.y < -20 || this.x < -20 || this.x > bgCanvas.width + 20) this.reset();
+            if (this.y < -20) { this.y = bgCanvas.height + 20; this.x = Math.random() * bgCanvas.width; }
         }
         draw() {
-            ctx.save();
-            ctx.globalAlpha = this.opacity;
+            ctx.save(); ctx.globalAlpha = this.opacity;
             if (this.isHeart) {
-                ctx.font = `${this.size * 6}px serif`;
-                ctx.fillStyle = '#EDA6B8';
+                ctx.font = `${this.size * 5}px serif`; ctx.fillStyle = '#FF7096';
                 ctx.fillText('❤', this.x, this.y);
             } else {
-                ctx.fillStyle = '#D47A93';
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fill();
+                ctx.fillStyle = '#E895AB'; ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2); ctx.fill();
             }
             ctx.restore();
         }
     }
-
-    for (let i = 0; i < 70; i++) particles.push(new Particle());
+    for (let i = 0; i < 55; i++) particles.push(new Particle());
 
     function animateBg() {
         ctx.clearRect(0, 0, bgCanvas.width, bgCanvas.height);
@@ -107,295 +88,176 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     animateBg();
 
-    /* ================= 3. LUXURY CURSOR & PARALLAX ================= */
+    /* ================= 3. CURSOR & MAGNETIC PHYSICS ================= */
     const cursor = document.getElementById('cursorGlow');
     document.addEventListener('mousemove', e => {
-        cursor.style.left = `${e.clientX}px`;
-        cursor.style.top = `${e.clientY}px`;
-
-        // Magnetic element physics
+        cursor.style.left = `${e.clientX}px`; cursor.style.top = `${e.clientY}px`;
         document.querySelectorAll('.magnetic-btn').forEach(btn => {
             const rect = btn.getBoundingClientRect();
             const dist = Math.hypot(e.clientX - (rect.left + rect.width / 2), e.clientY - (rect.top + rect.height / 2));
-            if (dist < 80) {
-                const pullX = (e.clientX - (rect.left + rect.width / 2)) * 0.3;
-                const pullY = (e.clientY - (rect.top + rect.height / 2)) * 0.3;
-                btn.style.transform = `translate(${pullX}px, ${pullY}px)`;
-            } else {
-                btn.style.transform = `translate(0px, 0px)`;
-            }
+            if (dist < 75) {
+                btn.style.transform = `translate(${(e.clientX - (rect.left + rect.width / 2)) * 0.25}px, ${(e.clientY - (rect.top + rect.height / 2)) * 0.25}px)`;
+            } else btn.style.transform = `translate(0px, 0px)`;
         });
     });
 
-    /* ================= 4. TOAST & COMPLIMENT ENGINES ================= */
+    /* ================= 4. TOASTS & FAKE iMESSAGES ================= */
     const toastBox = document.getElementById('toastContainer');
-    function triggerToast(title, msg) {
+    function showToast(title, msg) {
         const t = document.createElement('div');
-        t.className = 'luxury-toast';
-        t.innerHTML = `<span class="trophy">🏆</span><div><strong>Achievement: ${title}</strong><span>${msg}</span></div>`;
+        t.style.cssText = 'background:#2B1E21;color:white;padding:14px 20px;border-radius:14px;border-left:4px solid #FF4D7D;box-shadow:0 10px 30px rgba(0,0,0,0.2);font-size:13px;pointer-events:none;animation:slideIn .4s forwards';
+        t.innerHTML = `<strong style="color:#FF7096;display:block;margin-bottom:2px">🏆 ${title}</strong><span>${msg}</span>`;
         toastBox.appendChild(t);
-        setTimeout(() => t.remove(), 4600);
+        setTimeout(() => { t.style.opacity = '0'; setTimeout(() => t.remove(), 400); }, 4000);
     }
 
-    const compliments = [
-        "You look stunning today Sara ❤️",
-        "Remember to drink some water cutie!",
-        "Andrew is actively thinking about your smile.",
-        "Definite wife material detected ✨",
-        "6,000 km is nothing against our connection."
+    const fakeTexts = [
+        "stop looking so pretty it's distracting my workflow",
+        "i'm looking at flights to poland rn don't test me",
+        "quick reminder that you have my whole heart",
+        "are you free to be my wife later or are you busy",
+        "putting you on my taxes as a dependent (my happiness depends on u)"
     ];
-    const compEl = document.getElementById('floatingCompliment');
-    setInterval(() => {
-        compEl.textContent = compliments[Math.floor(Math.random() * compliments.length)];
-        compEl.classList.add('show');
-        setTimeout(() => compEl.classList.remove('show'), 5000);
-    }, 14000);
+    const imsgEl = document.getElementById('imessageToast');
+    const imsgTxt = document.getElementById('imessageText');
 
-    /* ================= 5. AI GIRLFRIEND SCANNER ================= */
+    setInterval(() => {
+        imsgTxt.textContent = fakeTexts[Math.floor(Math.random() * fakeTexts.length)];
+        imsgEl.classList.remove('hidden');
+        setTimeout(() => imsgEl.classList.add('show'), 100);
+        setTimeout(() => {
+            imsgEl.classList.remove('show');
+            setTimeout(() => imsgEl.classList.add('hidden'), 500);
+        }, 5500);
+    }, 13000);
+
+    /* ================= 5. COURT TRIAL SCANNER ================= */
     const scanBtn = document.getElementById('runScanBtn');
     const scanLine = document.getElementById('scanLine');
     const scanIdle = document.getElementById('scannerIdle');
     const scanReadout = document.getElementById('scannerReadout');
 
     scanBtn.addEventListener('click', () => {
-        scanIdle.textContent = "Scanning biometric signatures...";
-        scanLine.classList.add('active');
-        scanReadout.classList.add('hidden');
-
+        scanIdle.querySelector('p').textContent = "Cross-examining the defendant...";
+        scanLine.classList.add('active'); scanReadout.classList.add('hidden');
         setTimeout(() => {
-            scanLine.classList.remove('active');
-            scanIdle.classList.add('hidden');
+            scanLine.classList.remove('active'); scanIdle.classList.add('hidden');
             scanReadout.classList.remove('hidden');
-            triggerToast("Scientific Consensus", "Officially verified as the cutest girl alive.");
-        }, 2500);
+            showToast("Verdict In", "Sara sentenced to infinite cuddles.");
+        }, 2200);
     });
 
-    /* ================= 6. QUANTUM LOVE CALCULATOR ================= */
+    /* ================= 6. RIGGED LOVE CALCULATOR ================= */
     const calcBtn = document.getElementById('calculateLoveBtn');
     const calcNum = document.getElementById('calcNumber');
     const calcFill = document.getElementById('calcFill');
     const calcText = document.getElementById('calcText');
 
     calcBtn.addEventListener('click', () => {
-        let val = 0;
-        calcBtn.disabled = true;
+        let val = 0; calcBtn.disabled = true;
         const countUp = setInterval(() => {
-            val += Math.floor(Math.random() * 15) + 5;
+            val += Math.floor(Math.random() * 18) + 8;
             if (val >= 100) {
-                val = 100;
                 clearInterval(countUp);
-                calcNum.textContent = "∞ %";
-                calcFill.style.width = "100%";
-                calcText.textContent = "Error: Quantum overflow. Andrew's love cannot be bound by percentages.";
+                calcNum.textContent = "999 %"; calcFill.style.width = "100%";
+                calcText.textContent = "ERROR: Logic broken. The universe rigged this match.";
                 calcBtn.disabled = false;
-                triggerToast("Math Defeated", "Our compatibility broke the calculator.");
-            } else {
-                calcNum.textContent = `${val}%`;
-                calcFill.style.width = `${val}%`;
-            }
-        }, 80);
+                showToast("Math Broken", "Saatvik fell first, but fell way harder.");
+            } else { calcNum.textContent = `${val}%`; calcFill.style.width = `${val}%`; }
+        }, 70);
     });
 
-    /* ================= 7. LONG DISTANCE FLIGHT SIMULATOR ================= */
+    /* ================= 7. FLIGHT SIMULATOR ================= */
     const plane = document.getElementById('planeIcon');
-    const kmEl = document.getElementById('kmCounter');
-    let planeProgress = 0;
+    const flightTxt = document.getElementById('flightStatusText');
+    const statuses = ["Bribing pilots to fly faster...", "Calculating mid-air hug trajectory...", "Cruising over international simp-zone...", "Preparing landing gear for forehead kisses..."];
+    let planeProg = 0, statIdx = 0;
 
     setInterval(() => {
-        planeProgress = (planeProgress + 0.2) % 100;
-        plane.setAttribute('startOffset', `${planeProgress}%`);
-        kmEl.textContent = Math.floor(6124 * (1 - planeProgress / 100)).toLocaleString();
+        planeProg = (planeProg + 0.25) % 100;
+        plane.setAttribute('startOffset', `${planeProg}%`);
+        if (Math.floor(planeProg) % 25 === 0) {
+            flightTxt.textContent = statuses[statIdx % statuses.length];
+            statIdx++;
+        }
     }, 50);
 
-    /* ================= 8. ENVELOPE TYPEWRITER ================= */
+    /* ================= 8. ENVELOPE (THE SINCERE PUNCHLINE) ================= */
     const envContainer = document.getElementById('envelopeContainer');
     const env = envContainer.querySelector('.envelope');
     const letterOutput = document.getElementById('typewriterOutput');
-    const letterText = "My Dearest Sara,\n\nEvery single day spent waiting to close the distance between India and Poland is an investment into the most beautiful future I could ever fathom. You are my clarity, my comfort, and my absolute home.\n\nForever Yours,\nAndrew ❤️";
+    const letterText = "Okay Sara, real talk for a second.\n\nBehind all the stupid jokes and the teasing, the honest truth is that meeting you changed the entire trajectory of my life. Having someone like you exist on the same planet as me feels like an unfair cheat code.\n\nNo amount of kilometers between India and Poland will ever make me hesitate. I'd choose you in every room, in every country, across every lifetime.\n\nYours always,\nSaatvik ❤️";
 
     envContainer.addEventListener('click', () => {
         if (!env.classList.contains('open')) {
             env.classList.add('open');
-            let i = 0;
-            letterOutput.textContent = "";
+            let i = 0; letterOutput.textContent = "";
             setTimeout(() => {
-                const typeInterval = setInterval(() => {
-                    letterOutput.textContent += letterText.charAt(i);
-                    i++;
-                    if (i >= letterText.length) clearInterval(typeInterval);
-                }, 40);
-            }, 800);
+                const typeInt = setInterval(() => {
+                    letterOutput.textContent += letterText.charAt(i); i++;
+                    if (i >= letterText.length) clearInterval(typeInt);
+                }, 42);
+            }, 750);
         }
     });
 
-    /* ================= 9. MINI GAME: CATCH THE HEARTS ================= */
-    const gameCanvas = document.getElementById('miniGameCanvas');
-    const gCtx = gameCanvas.getContext('2d');
-    const startOverlay = document.getElementById('gameStartOverlay');
-    const winOverlay = document.getElementById('gameWinOverlay');
-    const scoreEl = document.getElementById('gameScore');
-    const timerEl = document.getElementById('gameTimer');
-
-    let gameHearts = [];
-    let score = 0;
-    let timeLeft = 25;
-    let gameActive = false;
-    let gameInterval, spawnInterval;
-
-    class GameHeart {
-        constructor() {
-            this.x = Math.random() * (gameCanvas.width - 40) + 20;
-            this.y = -30;
-            this.speed = Math.random() * 3 + 2;
-            this.size = 24;
-        }
-        update() { this.y += this.speed; }
-        draw() {
-            gCtx.font = `${this.size}px serif`;
-            gCtx.fillText('💖', this.x, this.y);
-        }
-    }
-
-    document.getElementById('startGameBtn').addEventListener('click', () => {
-        startOverlay.classList.add('hidden');
-        score = 0; timeLeft = 25; gameActive = true;
-        scoreEl.textContent = score;
-        gameHearts = [];
-
-        spawnInterval = setInterval(() => {
-            if (gameActive) gameHearts.push(new GameHeart());
-        }, 600);
-
-        gameInterval = setInterval(() => {
-            timeLeft--;
-            timerEl.textContent = `Time: ${timeLeft}s`;
-            if (timeLeft <= 0 || score >= 15) endGame(score >= 15);
-        }, 1000);
-
-        requestAnimationFrame(gameLoop);
-    });
-
-    function gameLoop() {
-        if (!gameActive) return;
-        gCtx.clearRect(0, 0, gameCanvas.width, gameCanvas.height);
-        gameHearts.forEach((h, idx) => {
-            h.update(); h.draw();
-            if (h.y > gameCanvas.height) gameHearts.splice(idx, 1);
-        });
-        requestAnimationFrame(gameLoop);
-    }
-
-    gameCanvas.addEventListener('click', e => {
-        if (!gameActive) return;
-        const rect = gameCanvas.getBoundingClientRect();
-        const clickX = (e.clientX - rect.left) * (gameCanvas.width / rect.width);
-        const clickY = (e.clientY - rect.top) * (gameCanvas.height / rect.height);
-
-        gameHearts.forEach((h, idx) => {
-            if (Math.hypot(clickX - h.x, clickY - h.y) < 35) {
-                gameHearts.splice(idx, 1);
-                score++;
-                scoreEl.textContent = score;
-                if (score >= 15) endGame(true);
-            }
-        });
-    });
-
-    function endGame(won) {
-        gameActive = false;
-        clearInterval(gameInterval); clearInterval(spawnInterval);
-        if (won) {
-            winOverlay.classList.remove('hidden');
-            triggerToast("Pro Collector", "You caught Andrew's heart 15 times over.");
-        } else {
-            startOverlay.classList.remove('hidden');
-            startOverlay.querySelector('button span').textContent = "Try Again ❤️";
-        }
-    }
-
-    document.getElementById('resetGameBtn').addEventListener('click', () => {
-        winOverlay.classList.add('hidden');
-        startOverlay.classList.remove('hidden');
-    });
-
-    /* ================= 10. FAKE VIRUS & AUDIO AUDIO EQUALIZER ================= */
-    setTimeout(() => document.getElementById('virusModal').classList.remove('hidden'), 18000);
+    /* ================= 9. FAKE VIRUS & AUDIO ================= */
+    setTimeout(() => document.getElementById('virusModal').classList.remove('hidden'), 16000);
     document.getElementById('closeVirus').onclick = () => document.getElementById('virusModal').classList.add('hidden');
     document.getElementById('acknowledgeVirus').onclick = () => {
         document.getElementById('virusModal').classList.add('hidden');
-        triggerToast("Infection Permanent", "There is no cure for being Andrew's girl.");
+        showToast("Ransom Paid", "Saatvik is waiting for that text message.");
     };
 
     const audio = document.getElementById('bgMusic');
     const musicBtn = document.getElementById('musicToggleBtn');
-    const visualizerBars = document.querySelectorAll('.visualizer span');
-    let isPlaying = false;
-    let vizInterval;
+    const vizBars = document.querySelectorAll('.visualizer span');
+    let playing = false, vizInt;
 
     musicBtn.addEventListener('click', () => {
-        if (!isPlaying) {
-            audio.play().catch(() => console.log("Audio autoplay prevented"));
-            musicBtn.textContent = '⏸️';
-            isPlaying = true;
-            vizInterval = setInterval(() => {
-                visualizerBars.forEach(bar => bar.style.height = `${Math.random() * 12 + 2}px`);
-            }, 120);
+        if (!playing) {
+            audio.play().catch(() => console.log("User interaction required for audio"));
+            musicBtn.textContent = '⏸️'; playing = true;
+            vizInt = setInterval(() => vizBars.forEach(b => b.style.height = `${Math.random() * 11 + 3}px`), 110);
         } else {
-            audio.pause();
-            musicBtn.textContent = '🎵';
-            isPlaying = false;
-            clearInterval(vizInterval);
-            visualizerBars.forEach(bar => bar.style.height = `3px`);
+            audio.pause(); musicBtn.textContent = '🎵'; playing = false;
+            clearInterval(vizInt); vizBars.forEach(b => b.style.height = '3px');
         }
     });
-
     document.getElementById('volumeSlider').addEventListener('input', e => audio.volume = e.target.value);
 
-    /* ================= 11. GRAND FINALE FIREWORKS ================= */
+    /* ================= 10. FINALE FIREWORKS ================= */
     const fwCanvas = document.getElementById('fireworksCanvas');
     const fCtx = fwCanvas.getContext('2d');
     fwCanvas.width = window.innerWidth; fwCanvas.height = window.innerHeight;
 
     class Spark {
-        constructor(x, y, color) {
-            this.x = x; this.y = y; this.color = color;
-            const angle = Math.random() * Math.PI * 2;
-            const speed = Math.random() * 4 + 1;
-            this.vx = Math.cos(angle) * speed;
-            this.vy = Math.sin(angle) * speed;
-            this.alpha = 1;
+        constructor(x, y, c) {
+            this.x = x; this.y = y; this.c = c;
+            const a = Math.random() * Math.PI * 2, s = Math.random() * 5 + 1;
+            this.vx = Math.cos(a) * s; this.vy = Math.sin(a) * s; this.alpha = 1;
         }
-        update() { this.x += this.vx; this.y += this.vy; this.alpha -= 0.015; }
+        update() { this.x += this.vx; this.y += this.vy; this.alpha -= 0.02; }
         draw() {
-            fCtx.save(); fCtx.globalAlpha = this.alpha;
-            fCtx.fillStyle = this.color;
-            fCtx.fillRect(this.x, this.y, 3, 3);
-            fCtx.restore();
+            fCtx.save(); fCtx.globalAlpha = this.alpha; fCtx.fillStyle = this.c;
+            fCtx.fillRect(this.x, this.y, 3.5, 3.5); fCtx.restore();
         }
     }
-
     let sparks = [];
     document.getElementById('secretTrigger').addEventListener('click', e => {
-        const colors = ['#EDA6B8', '#D4AF37', '#FF708D', '#FFF'];
-        for (let i = 0; i < 80; i++) {
-            sparks.push(new Spark(e.clientX, e.clientY + window.scrollY, colors[Math.floor(Math.random() * colors.length)]));
-        }
-        triggerToast("Infinite Love", "Sara + Andrew forever.");
+        ['#FF4D7D', '#FFD166', '#FF95AB', '#FFF'].forEach(c => {
+            for (let i = 0; i < 25; i++) sparks.push(new Spark(e.clientX, e.clientY + window.scrollY, c));
+        });
+        showToast("Infinite Simp", "Saatvik ❤️ Sara.");
     });
 
-    function loopFinale() {
+    function loopFw() {
         fCtx.clearRect(0, 0, fwCanvas.width, fwCanvas.height);
-        sparks.forEach((s, idx) => {
-            s.update(); s.draw();
-            if (s.alpha <= 0) sparks.splice(idx, 1);
-        });
-        requestAnimationFrame(loopFinale);
+        sparks.forEach((s, idx) => { s.update(); s.draw(); if (s.alpha <= 0) sparks.splice(idx, 1); });
+        requestAnimationFrame(loopFw);
     }
-    loopFinale();
+    loopFw();
 
-    /* Scroll animations */
-    const obs = new IntersectionObserver(entries => {
-        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.1 });
+    const obs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }), { threshold: 0.1 });
     document.querySelectorAll('.reveal-on-scroll').forEach(el => obs.observe(el));
 });
